@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import type { PageView } from "./navbar"
+import { Reveal } from "./animations"
 
 const FOOTER_LINKS = {
   Services: ["n8n Automation", "Digital Marketing", "Branding & Design", "Web Development"],
@@ -13,7 +14,7 @@ export function Footer({ onNavigate }: { onNavigate: (v: PageView) => void }) {
   return (
     <footer className="mt-auto border-t border-border bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <Reveal className="grid grid-cols-2 gap-8 md:grid-cols-4" variant="up">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <button
@@ -50,7 +51,7 @@ export function Footer({ onNavigate }: { onNavigate: (v: PageView) => void }) {
               </ul>
             </div>
           ))}
-        </div>
+        </Reveal>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
           <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Combite. All rights reserved.</p>

@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 
 export type PageView = 'home' | 'about' | 'services'
 
@@ -38,7 +39,12 @@ export function Navbar({ active, onNavigate }: { active: PageView; onNavigate: (
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+    >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <button
@@ -168,24 +174,32 @@ export function Navbar({ active, onNavigate }: { active: PageView; onNavigate: (
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            <MobileLink label="Home" onClick={() => handleNav('home')} active={active === 'home'} />
-            <MobileLink label="Services" onClick={() => handleNav('services')} active={active === 'services'} />
-            <MobileLink label="About / Stats" onClick={() => handleNav('about')} active={active === 'about'} />
-            <div className="mt-3 flex flex-col gap-2">
-              <Button variant="outline" className="rounded-xl" onClick={() => handleNav('about')}>
-                Free Website Audit
-              </Button>
-              <Button className="rounded-xl" onClick={() => handleNav('services')}>
-                Let&apos;s talk
-              </Button>
-            </div>
-          </nav>
-        </div>
-      )}
-    </header>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden border-t border-border bg-background md:hidden"
+          >
+            <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+              <MobileLink label="Home" onClick={() => handleNav('home')} active={active === 'home'} />
+              <MobileLink label="Services" onClick={() => handleNav('services')} active={active === 'services'} />
+              <MobileLink label="About / Stats" onClick={() => handleNav('about')} active={active === 'about'} />
+              <div className="mt-3 flex flex-col gap-2">
+                <Button variant="outline" className="rounded-xl" onClick={() => handleNav('about')}>
+                  Free Website Audit
+                </Button>
+                <Button className="rounded-xl" onClick={() => handleNav('services')}>
+                  Let&apos;s talk
+                </Button>
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   )
 }
 
