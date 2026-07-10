@@ -22,7 +22,7 @@ const SERVICES = [
 ]
 
 const COMPANY = [
-  { title: "About Us", desc: "Learn about Maxobiz story and team" },
+  { title: "About Us", desc: "Learn about Combite story and team" },
   { title: "Case Studies", desc: "Real results from real clients" },
   { title: "Blogs", desc: "Insights from our experts" },
   { title: "Careers", desc: "Join our growing team" },
@@ -44,10 +44,10 @@ export function Navbar({ active, onNavigate }: { active: PageView; onNavigate: (
         <button
           onClick={() => handleNav('home')}
           className="flex items-center gap-2 text-xl font-bold tracking-tight"
-          aria-label="Maxobiz home"
+          aria-label="Combite home"
         >
-          <span className="text-primary">M</span>
-          <span>axobiz</span>
+          <span className="text-primary">C</span>
+          <span>ombite</span>
         </button>
 
         {/* Desktop Nav */}

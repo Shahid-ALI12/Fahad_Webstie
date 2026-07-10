@@ -84,7 +84,7 @@ export function HomeView({ onNavigate }: { onNavigate: (v: PageView) => void }) 
                       <div className="size-3 rounded-full bg-yellow-400" />
                       <div className="size-3 rounded-full bg-green-400" />
                     </div>
-                    <div className="text-xs text-muted-foreground">maxobiz.com</div>
+                    <div className="text-xs text-muted-foreground">combite.com</div>
                   </div>
                   <div className="space-y-3">
                     <div className="h-3 w-3/4 rounded bg-primary/30" />

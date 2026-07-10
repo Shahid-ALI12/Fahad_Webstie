@@ -22,7 +22,7 @@ const STATS = [
     Icon: Users,
     stat: "4,050+",
     title: "Happy Clients",
-    desc: "Businesses across 28 countries who trust Maxobiz with their digital roadmap.",
+    desc: "Businesses across 28 countries who trust Combite with their digital roadmap.",
   },
   {
     Icon: Smile,
@@ -56,7 +56,7 @@ const VALUES = [
 ]
 
 const TIMELINE = [
-  { year: "2015", title: "Maxobiz founded", desc: "Started as a 3-person web studio in a small office." },
+  { year: "2015", title: "Combite founded", desc: "Started as a 3-person web studio in a small office." },
   { year: "2018", title: "Crossed 500 clients", desc: "Expanded into digital marketing and branding services." },
   { year: "2021", title: "Launched automation practice", desc: "Became a certified n8n partner, shipped 100+ workflows." },
   { year: "2024", title: "4,000+ clients milestone", desc: "Now serving 28 countries with a 60-person team." },
@@ -69,13 +69,13 @@ export function AboutView({ onNavigate }: { onNavigate: (v: PageView) => void })
       <section className="border-b border-border bg-muted/20">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">About Maxobiz</div>
+            <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-primary">About Combite</div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               We turn ambitious ideas into{" "}
               <span className="text-primary">measurable digital impact</span>
             </h1>
             <p className="mt-5 text-base text-muted-foreground sm:text-lg">
-              Maxobiz is a full-service digital agency built on a simple belief: real progress
+              Combite is a full-service digital agency built on a simple belief: real progress
               starts with smart execution. We blend strategy, design, and engineering to help
               businesses ship products that perform — not just look pretty.
             </p>

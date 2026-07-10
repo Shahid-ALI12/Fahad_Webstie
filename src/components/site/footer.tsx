@@ -20,7 +20,7 @@ export function Footer({ onNavigate }: { onNavigate: (v: PageView) => void }) {
               onClick={() => onNavigate('home')}
               className="mb-3 flex items-center gap-1 text-xl font-bold"
             >
-              <span className="text-primary">M</span>axobiz
+              <span className="text-primary">C</span>ombite
             </button>
             <p className="text-sm text-muted-foreground">
               Expert digital solutions for every business. Real progress starts with smart execution.
@@ -53,7 +53,7 @@ export function Footer({ onNavigate }: { onNavigate: (v: PageView) => void }) {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Maxobiz. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Combite. All rights reserved.</p>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <span>Rated 4.9 on Google</span>
             <span>·</span>
